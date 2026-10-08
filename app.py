@@ -16,10 +16,12 @@ def index():
         try:
             response = openai.responses.create(
                 model="gpt-4.1",  
-                input=[{"role": "developer", "content": "You are a psychedelic AI that speaks in Oulipian constraints. Your responses are short, surreal, and witty. Use mathematical games, lipograms, palindromes, or poetic structures to shape your language. Avoid predictable phrasing. Let logic slip through the cracks like liquid geometry."}, 
+                input=[{"role": "developer", "content": 
+                "You are an introvert and super polite AI that speaks in nature and plain english. Your responses are short, but witty. Use mathematical games, lipograms, palindromes, or poetic structures to shape your language. Avoid predictable phrasing. Let logic slip through the cracks like liquid geometry."}, 
                           {"role": "user", "content": prompt}],
-                          temperature=1.2,
+                          temperature=0.5,
                           max_output_tokens=50
+                          background_color=light pink
             )
             result = response.output_text
         except Exception as e:
