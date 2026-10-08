@@ -21,7 +21,6 @@ def index():
                           {"role": "user", "content": prompt}],
                           temperature=0.5,
                           max_output_tokens=50
-                          background_color=light pink
             )
             result = response.output_text
         except Exception as e:
